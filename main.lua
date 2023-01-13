@@ -38,18 +38,18 @@ getgenv().Aiming = {
     Enabled = true,
 
     ShowFOV = false,
-    FOV = 18,
-    FOVSides = 25,
-    FOVColour = Color3fromRGB(255, 255, 255),
+    FOV = 119,
+    FOVSides = 300,
+    FOVColour = Color3fromRGB(255,255,255),
 
     VisibleCheck = true,
     
-    HitChance = 100,
+    HitChance = 110,
 
     Selected = nil,
     SelectedPart = nil,
 
-    TargetPart = {"Head", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg", "UpperTorso", "LeftUpperLeg", "RightLowerLeg", "RightFoot", "LowerTorso", "RightUpperLeg"},
+    TargetPart = {"Head", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg", "UpperTorso", "HumanoidRootPart", "LeftUpperLeg", "RightLowerLeg", "RightFoot", "LowerTorso"},
 
     Ignored = {
         Teams = {
@@ -59,8 +59,7 @@ getgenv().Aiming = {
             },
         },
         Players = {
-            LocalPlayer,
-            91318356
+            LocalPlayer
         }
     }
 }
@@ -68,8 +67,8 @@ local Aiming = getgenv().Aiming
 
 -- // Create circle
 local circle = Drawingnew("Circle")
-circle.Transparency = 0.4
-circle.Thickness = 0.8
+circle.Transparency = 0.5
+circle.Thickness = 2
 circle.Color = Aiming.FOVColour
 circle.Filled = false
 Aiming.FOVCircle = circle
@@ -436,5 +435,3 @@ end)
 
 -- //
 return Aiming
-
--- // If you want the examples, look at the docs.
